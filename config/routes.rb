@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root "posts#new"
   get "posts/index" => "posts#index"
   get "posts/new" => "posts#new"
   get "posts/show" => "posts#show"
