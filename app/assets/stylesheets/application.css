@@ -1,6 +1,11 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Keania+One&family=Qahiri&display=swap');
 
+html, body {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 h1 {
   font-family: 'Black Ops One', cursive;
   color: #FFF3B8;
@@ -75,6 +80,7 @@ h1 {
 }
 
 .content {
+  position: relative;
   text-align: center;
   background-color: black;
   height:100vh;
@@ -82,4 +88,15 @@ h1 {
 
 .nin {
     color: rgb(223, 223, 133);
+}
+
+.control {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+}
+
+.start {
+  margin-right: 10px;
 }
