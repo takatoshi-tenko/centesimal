@@ -5,9 +5,11 @@
   <br>
   <br>
   <br>
-  <br>
 
-  <h2>司会の合図があるまで回答ページには<br>絶対いかないでください！！</h2>
-  <%= link_to("次の質問を回答する", "/posts/new") %>
+  <h2 class="attention">司会の合図があるまで<br>回答ページには<br>絶対いかないでください！！</h2>
+  <%= link_to("次の質問を回答する", "/posts/new", class: "button") %>
+  <div class="wait">
+  <img class="find-the-1" src="<%= image_path('wait_2.png') %>" alt="例の画像">
+  </div>
 
 </div>

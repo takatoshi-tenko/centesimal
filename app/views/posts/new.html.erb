@@ -1,11 +1,16 @@
 <% if $stop == "stop" %>
+<div class="question">
   <div class="question_stop">
-    回答受付停止中です。
+    現在受付停止中です。
   </div>
-  <div class="question_stop">
-    次の合図があったら、下のリンクをクリックしてください。
+  <div class="question_text">
+    次の合図があった時に、<br>下のリンクをクリックしてください。
   </div>
-  <%= link_to("次の質問を回答する", "/posts/new") %>
+  <%= link_to("次の質問を回答する", "/posts/new", class: "button") %>
+  <div class="wait">
+  <img class="find-the-1" src="<%= image_path('wait.png') %>" alt="例の画像">
+  </div>
+</div>
 
   <% else %>
   <div class="yes_no_button">
