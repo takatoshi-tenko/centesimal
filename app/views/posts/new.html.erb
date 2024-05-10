@@ -1,7 +1,12 @@
 <% if $stop == "stop" %>
   <div class="question_stop">
-    受付停止中です．
+    回答受付停止中です。
   </div>
+  <div class="question_stop">
+    次の合図があったら、下のリンクをクリックしてください。
+  </div>
+  <%= link_to("次の質問を回答する", "/posts/new") %>
+
   <% else %>
   <div class="yes_no_button">
     <%= form_tag("/posts/yes", {multipart: true}) do %>
