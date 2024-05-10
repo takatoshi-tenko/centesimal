@@ -3,13 +3,17 @@
 <head>
   <title>画像の配置例</title>
 </head>
-<body>
-  <h2>100分の1ゲーム！！</h2>
+<body class="top">
+  <h2 class="header">100分の1ゲーム！！</h2>
   
   <!-- 画像を配置 -->
-  <img width="300px" height="auto" src="<%= image_path('100.png') %>" alt="例の画像">
-  <div>合図があるまでボタンは押さないでね！</div>
-  <%= link_to("回答ページに戻る", "/posts/new") %>
+  <img class="fv" src="<%= image_path('100.jpg') %>" alt="例の画像">
+  <div class="title">
+    <img class="find-the-1" src="<%= image_path('find-the-1.svg') %>" alt="例の画像">
+    <div class="text__small">~ WARCに潜む1/100を探せ！ ~</div>
+  </div>
+  <div class="text">合図があるまでボタンは押さないでね！</div>
+  <%= link_to("回答ページに移動する", "/posts/new",  class: "button") %>
 
 </body>
 </html>

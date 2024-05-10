@@ -100,3 +100,46 @@ h1 {
 .start {
   margin-right: 10px;
 }
+
+.top {
+  text-align: center;
+}
+
+.fv {
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.title {
+  margin-bottom: 60px;
+}
+
+.find-the-1 {
+  width: 100%;
+  height: auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  margin-bottom: 8px;
+}
+
+.text {
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+
+.text__small {
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.button {
+  padding: 16px 32px;
+  background-color: #ffa500;
+  border: 1px solid #dcdcdc;
+  color: 000;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 4px 4px 8px #aaa;
+}
