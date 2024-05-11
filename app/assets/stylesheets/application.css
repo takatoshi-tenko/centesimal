@@ -126,15 +126,16 @@ h1 {
 
 .find-the-2 {
   width: 100%;
+  max-width: 400px;
   height: 100%;
   height: auto;
   padding: 0 16px;
   box-sizing: border-box;
-  margin-bottom: 150px;
+  margin-bottom: 50px;
 }
 
-.sign {
-  margin-bottom: 400px;
+.final {
+  margin-bottom: 16px;
 }
 
 .text {
@@ -190,7 +191,6 @@ h1 {
   margin: 60px auto 0;
   width: 100%;
   box-sizing: border-box;
-  max-width: 400px;
 }
 
 .attention {
