@@ -134,6 +134,10 @@ h1 {
   margin-bottom: 50px;
 }
 
+.sign {
+  padding: 0 32px;
+}
+
 .final {
   margin-bottom: 16px;
 }
