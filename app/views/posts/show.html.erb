@@ -4,12 +4,10 @@
   回答は1質問につき1回までになります。
   <br>
   <br>
-  <br>
-
-  <h2 class="attention">司会の合図があるまで<br>しばらくお待ちください！</h2>
-  <%= link_to("待機ページに移動する", "/posts/new", class: "button") %>
   <div class="wait">
-  <img class="find-the-1" src="<%= image_path('wait_2.png') %>" alt="例の画像">
+  <img class="find-the-2" src="<%= image_path('wait_2.png') %>" alt="例の画像">
   </div>
+  <div class="sign">合図があった時にスクロールしてね〜！</div>
+  <%= link_to("次の質問に回答する", "/posts/new", class: "button") %>
 
 </div>

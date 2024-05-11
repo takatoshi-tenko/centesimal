@@ -1,54 +1,9 @@
-<%
-=begin%>
-<% if $global_stop_status %>
-<div>global_stop_status is true</div>
-<% else %>
-<div>global_stop_status is false</div>
-<% end %>
-<% if session[:stop_status] %>
-<div>session_stop_status is true</div>
-<% else %>
-<div>session_stop_status is false</div>
-<% end %>
-<%
-=end%>
-<% if session[:stop_status] %>
-<div class="question">
-  <div class="question_stop">
-    現在受付停止中です。
-  </div>
-  <div class="question_text">
-    次の合図があった時に、<br>下記手順で進めてください
-    <div class="step">
-    <li>1. 「回答をリセットする」をクリック</li>
-    <li>2. 「次の質問を回答する」をクリック</li>
-    </div>
-  </div>
-  <%
-=begin%>
-<%= form_tag("/posts/reset", {multipart: true}) do %>
-    <input type="submit" name="reset" value="解答をリセットする" class="button_reset">
-<% end %>
-<%
-=end%>
-  <%= form_tag("/posts/reset", method: "post") do %>
-    <%= submit_tag "回答をリセットする", class: "button_reset" %>
+<div class="yes_no_button">
+  <%= form_tag("/posts/yes", {multipart: true}) do %>
+    <input type="submit" name="yes_no" value="YES" class="button_yes">
   <% end %>
-  <%= link_to("次の質問を回答する", "/posts/new", class: "button") %>
-  <div class="wait">
-  <img class="find-the-1" src="<%= image_path('wait.png') %>" alt="例の画像">
-  </div>
+  <br>
+  <%= form_tag("/posts/no", {multipart: true}) do %>
+    <input type="submit" name="yes_no" value=" NO " class="button_no">
+  <% end %>
 </div>
-
-  <% else %>
-  <div class="yes_no_button">
-    <%= form_tag("/posts/yes", {multipart: true}) do %>
-      <input type="submit" name="yes_no" value="YES" class="button_yes">
-    <% end %>
-    <br>
-    
-    <%= form_tag("/posts/no", {multipart: true}) do %>
-      <input type="submit" name="yes_no" value=" NO " class="button_no">
-    <% end %>
-  </div>
-<% end %>

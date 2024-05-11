@@ -15,9 +15,9 @@ class PostsController < ApplicationController
   #   session[:stop_status] = false unless $global_stop_status
   # end
 
-  def reset
-    session[:stop_status] = false unless $global_stop_status
-  end
+  # def reset
+  #   session[:stop_status] = false
+  # end
 
   def yes
     @post = Post.new( yes_no: "YES" )
@@ -63,7 +63,7 @@ class PostsController < ApplicationController
   def stop
     # $stop = "stop"
     # current_user.update(stop_status: true)
-    $global_stop_status = true
+    # $global_stop_status = true
     # session[:stop_status] = true
     redirect_to("/posts/index")
   end
@@ -71,7 +71,7 @@ class PostsController < ApplicationController
   def start
     # $stop = "start"
     # current_user.update(stop_status: false)
-    $global_stop_status = false
+    # $global_stop_status = false
     # session[:stop_status] = false
     # session[:yes_submitted] = false
     Post.destroy_all
