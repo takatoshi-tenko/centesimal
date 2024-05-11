@@ -22,7 +22,18 @@ class PostsController < ApplicationController
   def yes
     @post = Post.new( yes_no: "YES" )
     if @post.save
-      session[:stop_status] = false unless $global_stop_status
+      # session[:stop_status] = false unless $global_stop_status
+      redirect_to("/posts/show")
+      session[:stop_status] = true
+      $global_stop_status = true
+    else
+      render("posts/new")
+    end
+  end
+
+  def no
+    @post = Post.new( yes_no: "NO" )
+    if @post.save
       redirect_to("/posts/show")
       session[:stop_status] = true
       $global_stop_status = true
@@ -49,23 +60,11 @@ class PostsController < ApplicationController
   #   end
   # end
 
-  def no
-    @post = Post.new( yes_no: "NO" )
-    if @post.save
-      redirect_to("/posts/show")
-      session[:stop_status] = true
-      $global_stop_status = true
-    else
-      render("posts/new")
-    end
-    
-  end
-
   def stop
     # $stop = "stop"
     # current_user.update(stop_status: true)
     $global_stop_status = true
-    session[:stop_status] = true 
+    # session[:stop_status] = true
     redirect_to("/posts/index")
   end
 
@@ -73,7 +72,7 @@ class PostsController < ApplicationController
     # $stop = "start"
     # current_user.update(stop_status: false)
     $global_stop_status = false
-    session[:stop_status] = false
+    # session[:stop_status] = false
     # session[:yes_submitted] = false
     Post.destroy_all
     redirect_to("/posts/index")
