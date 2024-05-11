@@ -135,14 +135,27 @@ h1 {
 }
 
 .button {
-  padding: 16px 32px;
+  padding: 20px 32px;
   background-color: #ffa500;
   border: 1px solid #dcdcdc;
-  color: 000;
+  color: #000;
   border-radius: 50px;
   text-decoration: none;
   text-align: center;
   box-shadow: 4px 4px 8px #aaa;
+}
+
+.button_reset {
+  padding: 16px 32px;
+  background-color: #ffa500;
+  border: 1px solid #dcdcdc;
+  color: #000;
+  border-radius: 50px;
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 4px 4px 8px #aaa;
+  margin-bottom: 60px;
+  cursor: pointer;
 }
 
 .question {
@@ -168,4 +181,11 @@ h1 {
 .attention {
   padding: 0 32px;
   margin-bottom: 48px;
+}
+
+.step {
+  margin: 16px 0;
+}
+li {
+  list-style: none;
 }
