@@ -29,7 +29,8 @@ h1 {
   box-shadow    : 8px 8px 3px #666666;  /* 影の設定 */
   border        : 2px solid #ef6262;    /* 枠の指定 */
 }
-.button_yes:hover {
+.button_yes:focus,
+.button_yes:active {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #ef6262;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
@@ -49,7 +50,8 @@ h1 {
   box-shadow    : 8px 8px 3px #666666;  /* 影の設定 */
   border        : 2px solid #5e5ed8;    /* 枠の指定 */
 }
-.button_no:hover {
+.button_no:focus,
+.button_no:active {
   box-shadow    : none;        /* カーソル時の影消去 */
   color         : #5e5ed8;     /* 背景色     */
   background    : #ffffff;     /* 文字色     */
