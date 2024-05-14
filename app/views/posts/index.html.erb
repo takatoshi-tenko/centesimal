@@ -1,14 +1,14 @@
 <div class="content">
   <h2 class="people"><%= Post.count %> <span  style="color:navy">人中</span></h2>
   
-  <h1 style="display:inline"><%= Post.where(yes_no: "YES").count %></h1>
+  <h1 style="display:inline" class="result"><%= Post.where(yes_no: "YES").count %></h1>
   <h3 style="display:inline" class="nin">人</h3>
 <div class="control">
-<%= form_tag("/posts/start") do %>
-  <input class="start" type="submit" value="START" >
-<% end %>
-<%= form_tag("/posts/stop") do %>
-  <input class="stop" type="submit" value="STOP">
-<% end %>
+  <%= form_tag("/posts/start") do %>
+    <input class="start" type="submit" value="START" >
+  <% end %>
+  <%= form_tag("/posts/stop") do %>
+    <input class="stop" type="submit" value="STOP">
+  <% end %>
 </div>
 </div>

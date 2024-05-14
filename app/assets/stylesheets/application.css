@@ -76,7 +76,11 @@ h1 {
     background-color: #FFF3B8;
     padding: 20px;
     margin: 0;
-    font-size: 3rem;
+    font-size: 5rem;
+}
+
+.result {
+  font-size: 600px;
 }
 
 .content {
@@ -88,17 +92,48 @@ h1 {
 
 .nin {
     color: rgb(223, 223, 133);
+    font-size: 200px;
 }
 
 .control {
   position: absolute;
-  bottom: 10px;
-  left: 10px;
+  bottom: 20px;
+  left: 20px;
   display: flex;
 }
 
 .start {
   margin-right: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: #f0f8ff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+.start:hover {
+  background-color: #ffa500;
+  cursor: pointer;
+}
+
+.stop {
+  margin-right: 10px;
+  width: 200px;
+  height: 100px;
+  background-color: #f0f8ff;
+  font-size: 24px;
+  font-weight: bold;
+  color: #000;
+  padding: 10px;
+  border: none;
+  box-sizing: border-box;
+}
+.stop:hover {
+  background-color: #ffa500;
+  cursor: pointer;
 }
 
 .top {
