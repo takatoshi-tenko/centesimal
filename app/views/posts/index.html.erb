@@ -19,13 +19,11 @@
   <audio id="audioPlayer" src="<%= asset_path('answer.mp3') %>"></audio>
 
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById('playButton').addEventListener('click', function() {
-        setInterval(function() {
-          document.getElementById('stopForm').submit();
-        }, 7000);
-        document.getElementById('audioPlayer').play();
-      });
+    document.getElementById('playButton').addEventListener('click', function() {
+      setInterval(function() {
+        document.getElementById('stopForm').submit();
+      }, 8000);
+      document.getElementById('audioPlayer').play();
     });
   </script>
 
