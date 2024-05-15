@@ -7,8 +7,27 @@
   <%= form_tag("/posts/start") do %>
     <input class="start" type="submit" value="START" >
   <% end %>
+
+  <%= form_tag("/posts/stop", id: "stopForm") do %>
+    <input id="playButton" class="stop" type="button" value="Result">
+  <% end %>
+  
   <%= form_tag("/posts/stop") do %>
     <input class="stop" type="submit" value="STOP">
   <% end %>
+
+  <audio id="audioPlayer" src="<%= asset_path('answer.mp3') %>"></audio>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('playButton').addEventListener('click', function() {
+        setInterval(function() {
+          document.getElementById('stopForm').submit();
+        }, 7000);
+        document.getElementById('audioPlayer').play();
+      });
+    });
+  </script>
+
 </div>
 </div>
