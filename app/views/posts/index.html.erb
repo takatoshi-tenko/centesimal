@@ -5,7 +5,11 @@
   <h3 style="display:inline" class="nin">人</h3>
 <div class="control">
   <%= form_tag("/posts/start") do %>
-    <input class="start" type="submit" value="START" >
+    <div class="input-start">
+      <input class="start" type="submit" value="START" >
+      <div class="center-border"></div>
+      <span class="restart">リスタート！</span>
+    </div>
   <% end %>
 
   <%= form_tag("/posts/stop", id: "stopForm") do %>
