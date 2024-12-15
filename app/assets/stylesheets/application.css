@@ -6,14 +6,6 @@ html, body {
   margin: 0 !important;
 }
 
-h1 {
-  font-family: 'Black Ops One', cursive;
-  color: #FFF3B8;
-  background-color: black;
-  font-size: 15rem;
-  text-align: center;
-}
-
 /* ボタンのデザイン */
 .button_yes {
   display       : inline-block;
@@ -82,8 +74,35 @@ h1 {
 }
 
 .result {
-  font-size: 600px;
+  font-size: 400px;
 }
+
+.result-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 850px;
+  margin: 0 auto;
+}
+
+.result-content {
+  display: flex;
+}
+
+.result-number {
+  margin: 0;
+  font-family: 'Black Ops One', cursive;
+  color: #FFF3B8;
+  background-color: black;
+  font-size: 250px;
+  text-align: center;
+}
+
+.result-title {
+  color: #ffffff;
+  font-size: 3rem;
+}
+
 
 .content {
   position: relative;
@@ -94,7 +113,8 @@ h1 {
 
 .nin {
     color: rgb(223, 223, 133);
-    font-size: 200px;
+    font-size: 100px;
+    margin-left: -50px;
 }
 
 .control {
@@ -144,6 +164,10 @@ h1 {
   width: 150px;
   height: 1px;
   background-color: #000;
+}
+
+.result-layout {
+  width: 100%;
 }
 
 .result_button {
