@@ -12,7 +12,7 @@ class PostsController < ApplicationController
   end
 
   def yes
-    @post = Post.new( yes_no: "YES" )
+    @post = Post.new( yes_no: "A" )
     if @post.save
       redirect_to("/posts/show")
       $global_stop_status = true
@@ -22,7 +22,7 @@ class PostsController < ApplicationController
   end
 
   def no
-    @post = Post.new( yes_no: "NO" )
+    @post = Post.new( yes_no: "B" )
     if @post.save
       redirect_to("/posts/show")
       $global_stop_status = true
